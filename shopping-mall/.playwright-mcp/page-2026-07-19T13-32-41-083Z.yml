@@ -1,0 +1,91 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - heading "🛍️ 쇼핑몰" [level=1] [ref=f3e3]
+    - button "🛒 장바구니 2" [ref=f3e4] [cursor=pointer]:
+      - text: 🛒 장바구니
+      - generic [ref=f3e5]: "2"
+  - generic [ref=f3e6]:
+    - textbox "상품 검색" [ref=f3e7]
+    - generic [ref=f3e8]:
+      - button "전체" [ref=f3e9] [cursor=pointer]
+      - button "의류" [ref=f3e10] [cursor=pointer]
+      - button "전자기기" [ref=f3e11] [cursor=pointer]
+      - button "식품" [ref=f3e12] [cursor=pointer]
+      - button "뷰티" [ref=f3e13] [cursor=pointer]
+    - combobox [ref=f3e14]:
+      - option "기본순" [selected]
+      - option "가격 낮은순"
+      - option "가격 높은순"
+  - main [ref=f3e15]:
+    - generic [ref=f3e16] [cursor=pointer]:
+      - generic [ref=f3e17]: 👕
+      - generic [ref=f3e18]: 기본 반팔 티셔츠
+      - generic [ref=f3e19]: 의류
+      - generic [ref=f3e20]: 15,000원
+      - button "담기" [ref=f3e21]
+    - generic [ref=f3e22] [cursor=pointer]:
+      - generic [ref=f3e23]: 👖
+      - generic [ref=f3e24]: 슬림핏 청바지
+      - generic [ref=f3e25]: 의류
+      - generic [ref=f3e26]: 39,000원
+      - button "담기" [ref=f3e27]
+    - generic [ref=f3e28] [cursor=pointer]:
+      - generic [ref=f3e29]: 🧥
+      - generic [ref=f3e30]: 경량 패딩 자켓
+      - generic [ref=f3e31]: 의류
+      - generic [ref=f3e32]: 89,000원
+      - button "담기" [ref=f3e33]
+    - generic [ref=f3e34] [cursor=pointer]:
+      - generic [ref=f3e35]: 🎧
+      - generic [ref=f3e36]: 무선 이어폰
+      - generic [ref=f3e37]: 전자기기
+      - generic [ref=f3e38]: 59,000원
+      - button "담기" [ref=f3e39]
+    - generic [ref=f3e40] [cursor=pointer]:
+      - generic [ref=f3e41]: ⌚
+      - generic [ref=f3e42]: 스마트워치
+      - generic [ref=f3e43]: 전자기기
+      - generic [ref=f3e44]: 129,000원
+      - button "담기" [ref=f3e45]
+    - generic [ref=f3e46] [cursor=pointer]:
+      - generic [ref=f3e47]: 🔋
+      - generic [ref=f3e48]: 보조배터리
+      - generic [ref=f3e49]: 전자기기
+      - generic [ref=f3e50]: 25,000원
+      - button "담기" [ref=f3e51]
+    - generic [ref=f3e52] [cursor=pointer]:
+      - generic [ref=f3e53]: 🍎
+      - generic [ref=f3e54]: 유기농 사과 세트
+      - generic [ref=f3e55]: 식품
+      - generic [ref=f3e56]: 18,000원
+      - button "담기" [ref=f3e57]
+    - generic [ref=f3e58] [cursor=pointer]:
+      - generic [ref=f3e59]: 🍫
+      - generic [ref=f3e60]: 수제 초콜릿 박스
+      - generic [ref=f3e61]: 식품
+      - generic [ref=f3e62]: 22,000원
+      - button "담기" [ref=f3e63]
+    - generic [ref=f3e64] [cursor=pointer]:
+      - generic [ref=f3e65]: ☕
+      - generic [ref=f3e66]: 드립 커피 원두
+      - generic [ref=f3e67]: 식품
+      - generic [ref=f3e68]: 16,000원
+      - button "담기" [ref=f3e69]
+    - generic [ref=f3e70] [cursor=pointer]:
+      - generic [ref=f3e71]: 🧴
+      - generic [ref=f3e72]: 수분 진정 크림
+      - generic [ref=f3e73]: 뷰티
+      - generic [ref=f3e74]: 32,000원
+      - button "담기" [ref=f3e75]
+    - generic [ref=f3e76] [cursor=pointer]:
+      - generic [ref=f3e77]: 💄
+      - generic [ref=f3e78]: 립밤 세트
+      - generic [ref=f3e79]: 뷰티
+      - generic [ref=f3e80]: 12,000원
+      - button "담기" [ref=f3e81]
+    - generic [ref=f3e82] [cursor=pointer]:
+      - generic [ref=f3e83]: 💇
+      - generic [ref=f3e84]: 헤어 에센스
+      - generic [ref=f3e85]: 뷰티
+      - generic [ref=f3e86]: 21,000원
+      - button "담기" [ref=f3e87]

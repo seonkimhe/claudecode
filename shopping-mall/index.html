@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쇼핑몰</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>🛍️ 쇼핑몰</h1>
+    <button id="cart-btn" class="cart-btn">
+      🛒 장바구니 <span id="cart-count" class="cart-count">0</span>
+    </button>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="상품 검색" autocomplete="off">
+    <div id="category-tabs" class="category-tabs"></div>
+    <select id="sort-select">
+      <option value="default">기본순</option>
+      <option value="price-asc">가격 낮은순</option>
+      <option value="price-desc">가격 높은순</option>
+    </select>
+  </div>
+
+  <main id="product-grid" class="product-grid"></main>
+
+  <div id="detail-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="detail-close" class="modal-close">✕</button>
+      <div id="detail-icon" class="detail-icon"></div>
+      <h2 id="detail-name"></h2>
+      <p id="detail-description" class="detail-description"></p>
+      <p id="detail-stock" class="detail-stock"></p>
+      <p id="detail-price" class="detail-price"></p>
+      <div class="qty-control">
+        <button id="detail-qty-minus" type="button">-</button>
+        <span id="detail-qty">1</span>
+        <button id="detail-qty-plus" type="button">+</button>
+      </div>
+      <button id="detail-add-btn" class="primary-btn">장바구니에 담기</button>
+    </div>
+  </div>
+
+  <aside id="cart-panel" class="cart-panel hidden">
+    <div class="cart-header">
+      <h2>장바구니</h2>
+      <button id="cart-close" class="modal-close">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>총 수량</span>
+        <span id="cart-total-qty">0</span>
+      </div>
+      <div class="cart-total">
+        <span>총 금액</span>
+        <span id="cart-total-price">0원</span>
+      </div>
+      <button id="checkout-btn" class="primary-btn">주문하기</button>
+    </div>
+  </aside>
+  <div id="cart-overlay" class="overlay hidden"></div>
+
+  <div id="checkout-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="checkout-close" class="modal-close">✕</button>
+      <h2>주문 정보 입력</h2>
+      <form id="checkout-form">
+        <label>이름
+          <input type="text" id="checkout-name" required>
+        </label>
+        <label>주소
+          <input type="text" id="checkout-address" required>
+        </label>
+        <label>연락처
+          <input type="tel" id="checkout-phone" placeholder="010-0000-0000" required>
+        </label>
+        <button type="submit" class="primary-btn">주문 완료</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="complete-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>🎉 주문이 완료되었습니다!</h2>
+      <p>주문번호: <span id="order-id"></span></p>
+      <button id="complete-close" class="primary-btn">확인</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
