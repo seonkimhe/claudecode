@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날씨 앱</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>🌤️ 날씨 앱</h1>
+
+    <form id="search-form" class="search-form">
+      <input type="text" id="city-input" placeholder="도시 이름을 입력하세요 (예: Seoul)" autocomplete="off" required>
+      <button type="submit">검색</button>
+    </form>
+    <button id="locate-btn" class="locate-btn">📍 현재 위치로 검색</button>
+
+    <div id="status" class="status"></div>
+
+    <div id="result" class="result hidden">
+      <div class="location">
+        <h2 id="city-name"></h2>
+        <span id="updated-at"></span>
+      </div>
+
+      <div class="current">
+        <span id="weather-icon" class="icon"></span>
+        <span id="temperature" class="temperature"></span>
+        <span id="description" class="description"></span>
+      </div>
+
+      <div class="details">
+        <div class="detail-item">
+          <span class="label">체감온도</span>
+          <span id="feels-like" class="value"></span>
+        </div>
+        <div class="detail-item">
+          <span class="label">습도</span>
+          <span id="humidity" class="value"></span>
+        </div>
+        <div class="detail-item">
+          <span class="label">풍속</span>
+          <span id="wind-speed" class="value"></span>
+        </div>
+      </div>
+
+      <div class="forecast">
+        <h3 id="forecast-title">예보</h3>
+        <div id="forecast-list" class="forecast-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
