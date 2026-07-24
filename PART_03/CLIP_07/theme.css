@@ -1,0 +1,7 @@
+:root {
+  --bg-start: #4facfe;
+  --bg-end: #00f2fe;
+  --card-bg: rgba(255, 255, 255, 0.18);
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.75);
+}

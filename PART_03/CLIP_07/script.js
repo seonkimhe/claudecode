@@ -73,7 +73,7 @@ function weatherInfo(code) {
 
 async function geocodeCity(name) {
   const query = KOREAN_CITY_ALIASES[name.trim()] || name;
-  const url = `${GEOCODE_URL}?name=${encodeURIComponent(query)}&count=10&language=ko&format=json`;
+  const url = `${GEOCODE_URL}?name=${encodeURIComponent(query)}&count=${GEOCODE_RESULT_COUNT}&language=ko&format=json`;
   const res = await fetch(url);
   if (!res.ok) throw new Error("위치 검색에 실패했습니다.");
   const data = await res.json();
@@ -102,7 +102,7 @@ async function fetchWeather(latitude, longitude, timezone) {
     current: "temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code",
     daily: "weather_code,temperature_2m_max,temperature_2m_min",
     timezone: timezone || "auto",
-    forecast_days: "5",
+    forecast_days: String(FORECAST_DAYS),
   });
   const res = await fetch(`${FORECAST_URL}?${params}`);
   if (!res.ok) throw new Error("날씨 정보를 가져오지 못했습니다.");
@@ -204,4 +204,6 @@ locateBtn.addEventListener("click", () => {
   );
 });
 
-loadWeatherForCity("서울");
+document.getElementById("forecast-title").textContent = `${FORECAST_DAYS}일 예보`;
+
+loadWeatherForCity(DEFAULT_CITY);

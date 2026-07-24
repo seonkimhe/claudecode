@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const MIME = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript' };
+const PORT = 8080;
 
 http.createServer((req, res) => {
   const filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
@@ -15,4 +16,4 @@ http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': MIME[path.extname(filePath)] || 'text/plain' });
     res.end(data);
   });
-}).listen(8080, () => console.log('Server running at http://localhost:8080'));
+}).listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
